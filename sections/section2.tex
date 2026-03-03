@@ -1,0 +1,67 @@
+
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\setlength\parindent{24pt}
+\section[Low Density Parity Check Codes]
+{Part 2: Low Density Parity Check Codes}
+\hspace*{1.5em}\textbf{4. - }
+{
+For a range of $E_b/N_0$ values from 0dB to 10dB (i.e. eleven 1dB steps), measure the Bit
+Error-Rate for the following "codes":
+\par
+}
+\textbf{a. LDPC}
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=0.7\textwidth]{../lab_ss/WES268B_Lab5_Part2-4a_LDPC.png}
+   \caption{2.4.a - LDPC Bit Error Rates under AWGN}
+\end{figure}
+\par
+
+\textbf{5. - }
+{
+Repeat step 4 for a range of values of \textit{Max Iterations}. Based on your results, how many
+iterations \textit{should} we use for this particular LDPC code? Are you able to observe the point of
+diminshing returns?
+\par
+}
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=0.7\textwidth]{../lab_ss/WES268B_Lab5_Part2-5_LDPC_Max-Iteration-1.png}
+   \caption{2.5.1 - LDPC Bit Error Rates under AWGN, Max Iterations 1}
+\end{figure}
+\par
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=0.7\textwidth]{../lab_ss/WES268B_Lab5_Part2-5_LDPC_Max-Iteration-5.png}
+   \caption{2.5.2 - LDPC Bit Error Rates under AWGN, Max Iterations 5}
+\end{figure}
+\par
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=0.7\textwidth]{../lab_ss/WES268B_Lab5_Part2-5_LDPC_Max-Iteration-10.png}
+   \caption{2.5.3 - LDPC Bit Error Rates under AWGN, Max Iterations 10}
+\end{figure}
+\par
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=0.7\textwidth]{../lab_ss/WES268B_Lab5_Part2-5_LDPC_Max-Iteration-25.png}
+   \caption{2.5.4 - LDPC Bit Error Rates under AWGN, Max Iterations 25}
+\end{figure}
+\par
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=0.7\textwidth]{../lab_ss/WES268B_Lab5_Part2-5_LDPC_Max-Iteration-50.png}
+   \caption{2.5.5 - LDPC Bit Error Rates under AWGN, Max Iterations 50}
+\end{figure}
+\par
+
+{
+   Based on our testing, we can see that the Max Iterations appears to
+   have diminishing returns past 10 iterations as the number of coded
+   errors become less frequent. We note that the number of errors as 
+   time goes to infinity cannot definitively be 0, as we have only 
+   collected measurements after one minute.
+}
+
+\end{document}

@@ -1,0 +1,99 @@
+% !TeX program = pdflatex
+% !BIB program = biber
+
+\documentclass[11pt,a4paper]{article}
+
+% PREAMBLE
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,booktabs,amsmath,amssymb,mathtools,float}
+\usepackage{siunitx}\sisetup{detect-all}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{newtxtext,newtxmath} % Times New Roman
+\usepackage{tabularx}
+\usepackage{subfiles}
+\usepackage{amsmath}
+
+% TabularX Parameters
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\setlength{\parindent}{20pt}
+
+% TOC Depth
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% Section Numbering
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\makeatletter
+\renewcommand\theparagraph{\thesubsubsection.\roman{paragraph}}
+\makeatother
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{0.75ex}{0.5ex}
+
+% TOC Indentation (skip paragraph due to MiKTeX compatibility)
+\setlength{\cftsubsecindent}{1.5em}
+\setlength{\cftsubsubsecindent}{3em}
+
+% BEGIN DOCUMENT 
+\begin{document}
+
+% Title Page
+\begin{titlepage}
+    \centering
+    {\Huge\bfseries UCSD MAS WES268A - Lab 6 Report\par}
+    \vspace{2cm}
+    {\large\bfseries 21FEB2025\par}
+    \vspace{2cm}
+    \includegraphics[width=0.35\textwidth]{UCSD.png}\par\vspace{1.5cm}
+    %\vfill
+    \vspace{3cm}
+    {\scshape Prepared By: \par}
+    {\Large\itshape Joshua Hoang \\ Ryan Shimizu\par}
+
+    % Good Boy Brady
+    \vspace*{\fill}
+    \hfill
+    \includegraphics[width=0.2\textwidth]{EasterEgg.png}
+\end{titlepage}
+
+% Reset page number after title
+\clearpage
+\setcounter{page}{2}
+
+% Table of Contents 
+\tableofcontents
+\newpage
+
+% SECTION: Part 1
+\subfile{sections/section1}
+\newpage
+%% SECTION: Part 2
+%\subfile{sections/section2}
+%\newpage
+%% SECTION: Part 3
+%\subfile{sections/section3}
+%\newpage
+%% SECTION: Part 4
+%\subfile{sections/section4}
+%\newpage
+%% SECTION: Part 5
+%\subfile{sections/section5}
+%\newpage
+
+% Easter Egg
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+   \includegraphics[width=0.4\textwidth]{EasterEgg2.png}\\[1em]
+   \textbf{feelsgoodman}
+\end{center}
+\vspace*{\fill}
+
+\end{document}

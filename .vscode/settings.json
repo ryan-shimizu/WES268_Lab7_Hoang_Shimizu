@@ -1,0 +1,8 @@
+{
+    "latex-workshop.latex.search.rootFiles.include": [
+        "**/*.tex",
+        "**/*.rnw",
+        "**/*.Rnw",
+        "sections/"
+    ]
+}

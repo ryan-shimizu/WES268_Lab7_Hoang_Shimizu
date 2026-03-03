@@ -1,0 +1,28 @@
+1.1 (using phase estimate slider to achieve a lock within our phase error threshold)
+freq offset causes the error to bounce sinusoidally, noise causes random jitters in the error function, and the filter bandwidth smooths out the noise so there is less jitter (i.e. lower bandwidth = smoother error)
+a) yes
+b) fk no
+c) yes
+d) yes
+e) no
+f) yes (88 sec)
+g) nah
+h) no
+
+2.1.3
+1)freq pull-in-time =~1.25ms | phase pull-in-time = ~1.7ms
+2)freq pull-in-time =~6.33ms | phase pull-in-time = ~6.76ms
+6) freq pull-in-time =~61.63us | phase pull-in-time = ~198.57us
+7) freq pull-in-time =~23.24us | phase pull-in-time = ~48.59us
+8) freq pull-in-time =~3.19ms | phase pull-in-time = ~3.99ms
+
+2.2.3
+1) can't track
+2) sdrs tweakin (500hz freq offset internal) freq pull-in-time =~62.66ms | phase pull-in-time = ~65.2ms
+3) can't track
+4) freq pull-in-time =~59.3ms | phase pull-in-time = ~67.3ms
+
+3.1.3
+beta = 0 | zeta = 6.86
+beta = 0.5 | zeta = 21.63
+beta = 1 | zeta = 30.79

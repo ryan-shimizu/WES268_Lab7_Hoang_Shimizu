@@ -1,0 +1,192 @@
+% !TeX program = pdflatex
+% !BIB program = biber
+
+\documentclass[11pt,a4paper]{article}
+
+% PREAMBLE
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,booktabs,amsmath,amssymb,mathtools,float}
+\usepackage{siunitx}\sisetup{detect-all}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{newtxtext,newtxmath}
+\usepackage{tabularx}
+
+\setlength{\parindent}{20pt}
+
+% TOC + numbering depth
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+% BEGIN DOCUMENT
+\begin{document}
+
+% Title Page
+\begin{titlepage}
+    \centering
+    {\Huge\bfseries UCSD MAS WES268A \\ Lab 6 Report\par}
+    \vspace{2cm}
+    {\large 14FEB2026\par}
+    \vspace{2cm}
+    \includegraphics[width=0.35\textwidth]{UCSD.png}
+    \vspace{3cm}
+
+    {\Large Joshua Hoang \\ Ryan Shimizu\par}
+\end{titlepage}
+
+\clearpage
+\setcounter{page}{2}
+
+% TOC 
+\tableofcontents
+\newpage
+
+% 1 Generation of an OFDM Waveform
+\section{Generation of an OFDM Waveform}
+
+\subsection{Waveform Spectrum}
+
+% 1.1.1
+\subsubsection{ }
+INSERT
+
+% 1.1.2
+\subsubsection{ }
+INSERT
+
+% 1.1.3
+\subsubsection{ }
+INSERT
+
+% 1.1.4
+\subsubsection{ }
+INSERT
+
+% 1.1.5
+\subsubsection{ }
+INSERT
+
+% 1.1.6
+\subsubsection{ }
+INSERT
+
+% 1.1.7
+\subsubsection{ }
+INSERT
+
+% 1.1.8
+\subsubsection{ }
+\noindent\textbf{Question.} Provided that the pulse shape for the OFDM waveform is rectangular, compare the measured bandwidth of all three signals. What do you notice?
+
+\noindent\textbf{Answer.} INSERT
+
+% 2 Delay Spread and Cyclic Prefix
+\section{Delay Spread and Cyclic Prefix}
+
+% 2.1
+\subsection{Timing Offset Effects}
+
+% 2.1.1
+\subsubsection{ }
+INSERT
+
+% 2.1.2
+\subsubsection{ }
+INSERT
+
+% 2.1.3
+\subsubsection{ }
+INSERT
+
+% 2.1.4
+\subsubsection{ }
+INSERT
+
+% 2.1.5
+\subsubsection{ }
+\noindent\textbf{Question.} Observe the “Single Subcarrier” and “All Subcarriers” constellations. What do you see?
+
+\noindent\textbf{Answer.} INSERT
+
+% 2.1.6
+\subsubsection{ }
+\noindent\textbf{Question.} Stepping through each carrier by increasing subcarrier number, what do you notice? How many subcarrier steps does it take to reach pi/2 phase shift?
+
+\noindent\textbf{Answer.} INSERT
+
+% 2.1.7
+\subsubsection{ }
+INSERT
+
+% 2.1.8
+\subsubsection{ }
+INSERT
+
+% 2.1.9
+\subsubsection{ }
+
+\noindent\textbf{Question.} How does the phase offset scale with linear steps of CP Offset?
+
+\noindent\textbf{Answer.} INSERT
+
+% 2.2
+\subsection{Effect of Fading Channel on OFDM Subcarriers}
+
+% 2.2.1
+\subsubsection{ }
+INSERT
+
+% 2.2.2
+\subsubsection{ }
+INSERT
+
+% 2.2.3
+\subsubsection{ }
+\noindent\textbf{Question.} Compare the constellation to the Channel Frequency Response graph, how are they related?
+
+\noindent\textbf{Answer.} INSERT
+
+% 2.2.4
+\subsubsection{ }
+\noindent\textbf{Question.} Comment on your results:
+
+\noindent\textbf{Answer.} INSERT
+
+% 2.2.5
+\subsubsection{ }
+INSERT
+
+% 2.2.6
+\subsubsection{ }
+\noindent\textbf{Question.} What happens as you increase Nsym at the receiver?
+
+\noindent\textbf{Answer.} INSERT
+
+% 2.2.7
+\subsubsection{ }
+INSERT
+
+% 2.2.8
+\subsubsection{ }
+\noindent\textbf{Question.} Comment on your results:
+
+\noindent\textbf{Answer.} INSERT
+
+% 3 Post Lab Questions
+\section{Post Lab Questions}
+
+\subsection{Post Lab Question 1}
+INSERT
+
+\subsection{Post Lab Question 2}
+INSERT
+
+\subsection{Post Lab Question 3}
+INSERT
+
+\end{document}

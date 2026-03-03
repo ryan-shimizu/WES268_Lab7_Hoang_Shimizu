@@ -1,0 +1,93 @@
+{
+    "name": "TeX Live LaTeX Dev Container",
+    
+    /// Uncomment to rebuild the image from scratch
+    // "build": {
+    //     "dockerfile": "Dockerfile",
+    //     "context": ".."
+    // },
+
+    // Otherwise pull pre-built image from Docker Hub
+    "image": "elceboyo/ceboyo-tex-enviro:latest",
+    "workspaceFolder": "/workspace",
+    "remoteUser": "root",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "James-Yu.latex-workshop"
+            ],
+            "settings": {
+                "latex-workshop.latex.search.rootFiles.include": [
+                    "**/*.tex",
+                    "**/*.rnw",
+                    "**/*.Rnw",
+                    "sections/"
+                ],
+                // =============================
+                // Build configuration
+                // =============================
+                "latex-workshop.latex.tools": [
+                    {
+                        "name": "latexmk",
+                        "command": "latexmk",
+                        "args": [
+                            "-pdf",
+                            "-interaction=nonstopmode",
+                            "-synctex=1",
+                            "%DOC%"
+                        ]
+                    }
+                ],
+                "latex-workshop.latex.recipes": [
+                    {
+                        "name": "latexmk 🔄",
+                        "tools": [
+                            "latexmk"
+                        ]
+                    }
+                ],
+                // =============================
+                // PDF viewer + SyncTeX
+                // =============================
+                "latex-workshop.view.pdf.viewer": "tab",
+                "latex-workshop.view.pdf.ref.viewer": "tab",
+                "latex-workshop.synctex.afterBuild.enabled": true,
+                "latex-workshop.synctex.keybinding": "double-click",
+                // =============================
+                // File handling
+                // =============================
+                "latex-workshop.latex.clean.fileTypes": [
+                    "*.aux",
+                    "*.bbl",
+                    "*.blg",
+                    "*.idx",
+                    "*.ind",
+                    "*.lof",
+                    "*.lot",
+                    "*.out",
+                    "*.toc",
+                    "*.acn",
+                    "*.acr",
+                    "*.alg",
+                    "*.glg",
+                    "*.glo",
+                    "*.gls",
+                    "*.ist",
+                    "*.fls",
+                    "*.log",
+                    "*.fdb_latexmk",
+                    "*.synctex.gz"
+                ],
+                // =============================
+                // Auto build settings
+                // =============================
+                "latex-workshop.latex.autoBuild.run": "onSave",
+                "latex-workshop.message.log.show": false,
+                "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click"
+            }
+        }
+    }
+}
