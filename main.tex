@@ -646,19 +646,113 @@
 
 \subsection{Post Lab Question 1}
 \noindent\textbf{Question.} 
-
+{
+    Plot on the same graph, the uncoded bit error rate vs. number of Faded Subcarriers for an OFDM
+    signal and Golay (24,12) coded bit error rate vs. number of Faded Subcarriers.
+}
 \noindent\textbf{Answer.} 
-
+{
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{lab_ss/WES268B_Lab7_Part4-1_Sketch.png}
+    \caption{Lab 7 - Uncoded bit error rate for OFDM vs Golay (24,12) vs Faded Subcarriers}
+    %\label{f50}
+\end{figure}
+}
 \subsection{Post Lab Question 2}
+\noindent\textbf{Question.}
+{
+    Explain why you think the Golay (24,12) code fails to correct three bit errors when the
+    Usable Subcarriers per OFDM symbol is 23. 
+}
+\noindent\textbf{Answer.} 
+{
+    The Golay (24,12) can correct up to 3 bit errors at once. But when the number of usable carriers 
+    is reduced to 23, the unusable carrier acts as a guaranteed error. When the receiver experiences 
+    3 bit errors in addition to the bit error introduced by the bad carrier, it effectively becomes 4 
+    errors which exceed the Golay (24,12) correction capabilities.
+}
+
+\subsection{Post Lab Question 3a}
+{
+    Consider an 8-QAM constellation with IQ values:
+    $$X_{8QAM}=\pm A 
+    \begin{Bmatrix}
+    (3+j) & (-1+j) \\
+    (1+3j) & (-3+3j)
+    \end{Bmatrix} $$ 
+}
+\noindent\textbf{Question.}
+{
+    Sketch the constellation.
+}
+\noindent\textbf{Answer.}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{lab_ss/WES268B_Lab7_Part4-3-a_Sketch.png}
+    \caption{Lab 7 - 8QAM Constellation Sketch}
+    %\label{f50}
+\end{figure}
+
+\subsection{Post Lab Question 3b}
 \noindent\textbf{Question.} 
+{
+    Calculate the average energy per symbol Es. You may assume that the probability of
+    each of the 8 symbols are equally likely.
+}
+\noindent\textbf{Answer.}
+{
+    $$E_s=\frac{1}{8}\sum_{k=1}^{8}|X_{8QAM}|^2$$
+    $$X_1=A(3+j)$$
+    $$|X_1|^2=A^2(3^2+1^2)=10A^2$$
+    $$X_2=A(-1+j)$$
+    $$|X_2|^2=A^2(1^2+1^2)=2A^2$$
+    $$X_3=A(1+3j)$$
+    $$|X_3|^2=A^2(1^2+3^2)=10A^2$$
+    $$X_4=A(-3+3j)$$
+    $$|X_4|^2=A^2(3^2+3^2)=18A^2$$
+    $$E_s=\frac{1}{8}(10+2+10+18)(2)A^2$$
+    $$E_s=\frac{80A^2}{8}=10A^2$$
+}
+\subsection{Post Lab Question 3c}
+\noindent\textbf{Question.}
+{
+    Find the value A such that the average energy per symbol Es = 1 .
+}
+\noindent\textbf{Answer.} 
+{
+    $$1=10A^2$$
+    $$A=\frac{1}{\sqrt{10}}$$
+}
+\subsection{Post Lab Question 3d}
+\noindent\textbf{Question.} 
+{
+    Calculate the PAPR (Peak to Average Power Ratio) of an OFDM symbol assuming
+    $N=64$ active subcarriers and 8-QAM assuming $Es = 1$. If the transmitted symbols
+    are the following:
+    $$s(n)=\frac{1}{\sqrt{N}\sum_{k=0}^{N-1}X_ke^{j\frac{2\pi}{N}nk}}$$
+    $$n=0,1,...,N-1$$
+    $$PAPR=\frac{max(x(n)x^*(n))}{E[x(n)x^*(n)]}$$
+}
 
 \noindent\textbf{Answer.} 
-
-\subsection{Post Lab Question 3}
-\noindent\textbf{Question.} 
-
-\noindent\textbf{Answer.} 
-
+{
+    We can calculate average power:
+    $$E[x(n)x^*(n)]=\frac{1}{N}E[\sum_{k=0}^{N-1}|X_k|^2]$$
+    $$=\frac{1}{N}\times N$$
+    $$E[x(n)x^*(n)]=1$$
+    Peak power occurs when all subcarriers are aligned in phase.
+    $$X_k=1$$
+    $$x(n)=\frac{1}{\sqrt{N}\sum_{k=0}^{N-1}1}$$
+    $$=\frac{N}{\sqrt{N}}$$
+    $$=\sqrt{N}$$
+    Calculate power:
+    $$|x(n)|^2=(\sqrt{N})^2$$
+    $$=N$$
+    Since we have $N=64$ subcarriers:
+    $$\text{max}|x(n)|^2=64$$
+    $$PAPR=\frac{64}{1}=64\approx18.06dB$$
+}
 \subsection{Post Lab Question 4}
 \noindent\textbf{Question.} 
 {
