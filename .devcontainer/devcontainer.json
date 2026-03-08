@@ -1,7 +1,7 @@
 {
     "name": "TeX Live LaTeX Dev Container",
     
-    /// Uncomment to rebuild the image from scratch
+    // Uncomment to rebuild the image from scratch
     // "build": {
     //     "dockerfile": "Dockerfile",
     //     "context": ".."
@@ -43,7 +43,7 @@
                 ],
                 "latex-workshop.latex.recipes": [
                     {
-                        "name": "latexmk 🔄",
+                        "name": "latexmk",
                         "tools": [
                             "latexmk"
                         ]
@@ -68,7 +68,6 @@
                     "*.lof",
                     "*.lot",
                     "*.out",
-                    "*.toc",
                     "*.acn",
                     "*.acr",
                     "*.alg",
@@ -86,7 +85,9 @@
                 // =============================
                 "latex-workshop.latex.autoBuild.run": "onSave",
                 "latex-workshop.message.log.show": false,
-                "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click"
+                "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+                "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false
+
             }
         }
     }
